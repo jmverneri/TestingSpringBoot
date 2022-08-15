@@ -1,6 +1,7 @@
 package com.example.firstspringboot;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -9,6 +10,7 @@ public class Person {
     private String name;
     private String tech;
     @Autowired
+    @Qualifier("laptop")
     private Laptop laptop;
 
     public int getpId() {
